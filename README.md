@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# APLIKASI POINT OF SALES (POS) - TOKO
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplikasi Point of Sales (POS) berbasis web untuk mengelola transaksi penjualan, data produk, stok, dan laporan toko. Proyek ini memiliki dua role pengguna yaitu **Admin** dan **Kasir**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🔑 Contoh Akun Login (Demo)
 
-### `npm start`
+Gunakan kredensial berikut untuk masuk ke dalam aplikasi sesuai dengan rolenya masing-masing:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* **Admin**
+  * Username: `admin`
+  * Password: `admin123`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* **Kasir**
+  * Username: `kasir`
+  * Password: `kasir123`
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🎨 Tautan Desain UI/UX
+* [Figma UI/UX Design - Aplikasi POS](https://www.figma.com/design/KKI27Cf1VGj8yXBKoIL9vn/UI-UX-Aplikasi-POS?m=auto&t=UZwkqnCP5OzgcFZU-6)
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 1. Hirarki Menu Sidebar/Navbar
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Aplikasi POS memiliki dua role pengguna, yaitu **Admin** dan **Kasir**.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Struktur Menu
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```text
+POS TOKO
+│
+├── Login
+│
+├── Admin
+│   ├── Dashboard
+│   ├── Transaksi
+│   │   └── Riwayat Transaksi
+│   ├── Produk
+│   │   ├── Tambah Produk
+│   │   ├── Edit Produk
+│   │   └── Tambah Stok
+│   ├── Laporan
+│   ├── Pengguna
+│   └── Pengaturan
+│
+└── Kasir
+    ├── Kasir / Transaksi
+    └── Riwayat Transaksi
