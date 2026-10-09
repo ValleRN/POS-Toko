@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/POS-Toko/static/css/main.3058393f.css",
-    "main.js": "/POS-Toko/static/js/main.28740c34.js",
+    "main.css": "/POS-Toko/static/css/main.41e00ca6.css",
+    "main.js": "/POS-Toko/static/js/main.c032225f.js",
     "index.html": "/POS-Toko/index.html",
-    "main.3058393f.css.map": "/POS-Toko/static/css/main.3058393f.css.map",
-    "main.28740c34.js.map": "/POS-Toko/static/js/main.28740c34.js.map"
+    "main.41e00ca6.css.map": "/POS-Toko/static/css/main.41e00ca6.css.map",
+    "main.c032225f.js.map": "/POS-Toko/static/js/main.c032225f.js.map"
   },
   "entrypoints": [
-    "static/css/main.3058393f.css",
-    "static/js/main.28740c34.js"
+    "static/css/main.41e00ca6.css",
+    "static/js/main.c032225f.js"
   ]
 }
