@@ -15,6 +15,9 @@ export default function PengaturanPage() {
     debit: true
   });
 
+  // State Pengaturan Pajak (Default 5%)
+  const [taxSetting, setTaxSetting] = useState(5);
+
   // State Toast Notification
   const [toast, setToast] = useState({ show: false, message: '' });
 
@@ -35,11 +38,16 @@ export default function PengaturanPage() {
     showToast('Metode pembayaran berhasil disimpan');
   };
 
+  const handleTaxSubmit = (e) => {
+    e.preventDefault();
+    showToast(`Pengaturan pajak berhasil disimpan: ${taxSetting}%`);
+  };
+
   return (
     <main className="w-full pt-20 bg-background min-h-screen px-6 py-6 lg:px-8">
       <div className="flex flex-col w-full gap-6 pb-12">
         
-        {/* Header & Breadcrumb (Konsisten full-width dengan garis aksen biru vertikal) */}
+        {/* Header & Breadcrumb */}
         <div className="flex flex-col gap-1">
           <nav className="flex items-center gap-1 font-label-md text-label-md text-on-surface-variant">
             <a href="#" className="hover:text-primary transition-colors">Admin</a>
@@ -54,11 +62,11 @@ export default function PengaturanPage() {
             </h1>
           </div>
           <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
-            Kelola informasi gerai dan metode pembayaran aktif.
+            Kelola informasi gerai, metode pembayaran aktif, dan pajak.
           </p>
         </div>
 
-        {/* Main Stacked Content Cards (Full width mengikuti struktur halaman lain) */}
+        {/* Main Stacked Content Cards */}
         <div className="flex flex-col gap-6">
 
           {/* Card 1: Informasi Toko */}
@@ -159,6 +167,45 @@ export default function PengaturanPage() {
                   />
                   <span className="font-title-sm text-title-sm text-on-surface font-medium">Debit</span>
                 </label>
+              </div>
+
+              <div className="pt-2 flex justify-end">
+                <button className="flex items-center gap-2 px-5 py-2.5 rounded-lg bg-primary text-on-primary font-title-sm text-title-sm hover:opacity-90 transition-colors shadow-sm cursor-pointer" type="submit">
+                  <span className="material-symbols-outlined text-[18px]">check</span>
+                  <span>Simpan Perubahan</span>
+                </button>
+              </div>
+            </form>
+          </section>
+
+          {/* Card 3: Pengaturan Pajak (BARU) */}
+          <section className="bg-surface-container-lowest rounded-xl p-6 shadow-sm border border-slate-200 flex flex-col">
+            <div className="flex items-center gap-3 pb-4 border-b border-slate-200 mb-4">
+              <div className="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+                {/* Menggunakan ikon percent dari material symbols */}
+                <span className="material-symbols-outlined text-[24px]">percent</span>
+              </div>
+              <div>
+                <h2 className="font-title-lg text-title-lg text-on-surface font-semibold">Pengaturan Pajak</h2>
+                <p className="font-body-sm text-body-sm text-on-surface-variant">Atur persentase pajak yang dibebankan pada transaksi pelanggan</p>
+              </div>
+            </div>
+
+            <form onSubmit={handleTaxSubmit} className="flex flex-col gap-4">
+              <div className="flex flex-col gap-1.5 w-full md:w-1/3">
+                <label className="font-label-md text-label-md text-on-surface font-medium" htmlFor="persentasePajak">Persentase Pajak (%)</label>
+                <div className="flex items-center gap-3">
+                  <input 
+                    className="w-full h-10 px-3 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md border border-slate-200 focus:bg-surface-container-lowest focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all" 
+                    id="persentasePajak" 
+                    type="number" 
+                    min="0"
+                    max="100"
+                    value={taxSetting}
+                    onChange={(e) => setTaxSetting(e.target.value)}
+                  />
+                  <span className="font-body-md text-body-md text-on-surface-variant">%</span>
+                </div>
               </div>
 
               <div className="pt-2 flex justify-end">
