@@ -1,0 +1,13 @@
+# Abaikan folder node_modules di semua folder
+node_modules/
+pos/node_modules/
+backend/node_modules/
+
+# Abaikan file environment & log sensitif
+.env
+backend/.env
+pos/.env
+*.log
+
+# Abaikan file build hasil kompilasi
+pos/build/
